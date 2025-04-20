@@ -20,7 +20,7 @@ import {app} from "./app.js";
 
 connectDb()
 .then(() => {
-    app.listen(process.env.PORT || 8050, () => {
+    app.listen(process.env.PORT || 8051, () => {
         console.log(`Server is running on port: ${process.env.PORT}`)
     } )
 })

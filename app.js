@@ -62,6 +62,16 @@ import orderRoutes from "./routes/orders.route.js";
 import razorpayPaymentRoutes from "./routes/razorpayPayment.route.js";
 import customerRoutes from "./routes/customer.route.js";
 
+
+//Below are upgraded routes
+
+import proudctCategoryRouter from "./routes/product.Category.route.js";
+import productSubcategoryRouter from "./routes/product.Subcategory.route.js";
+import finalProductRouter from "./routes/finalProduct.route.js";
+import priceRouter from "./routes/price.route.js"
+import userRouter from "./routes/user.route.js";
+import CustomerRouter from "./routes/customer.route.js";
+
 app.use("/uploads", express.static("public/uploads"));
 
 //API routes
@@ -71,5 +81,11 @@ app.use("/api", orderRoutes);
 app.use("/api/payments", razorpayPaymentRoutes);
 app.use("/api", customerRoutes);
 
+
+app.use('/api', proudctCategoryRouter);
+app.use('/api', productSubcategoryRouter);
+app.use('/api', finalProductRouter);
+app.use('/api', priceRouter)
+app.use('/api', userRouter);
 
 export { app }
